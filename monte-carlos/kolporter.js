@@ -28,5 +28,5 @@ exports.script = () => {
         }
     }
 
-    console.log(`Najlepsi pocet balikov je ${najlepsiPocetNovin / 10} so ziskom ${najlepsiZisk.toFixed(2)}€`);
+    console.log(`Najlepsi pocet balikov je ${najlepsiPocetNovin / 10} so ziskom ${(najlepsiZisk / 100).toFixed(2)}€`);
 };

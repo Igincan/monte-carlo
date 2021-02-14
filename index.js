@@ -4,7 +4,7 @@ let scripts = {};
 
 fs.readdirSync("monte-carlos").forEach((file) => {
     let fileContents = require(`./monte-carlos/${file}`);
-    scripts[file.split('.')[0]] = fileContents.script;
+    scripts[file.split(".")[0]] = fileContents.script;
 });
 
 if (process.argv.length < 3) {
@@ -23,3 +23,4 @@ if (scripts[process.argv[2]]) {
     console.log("Invalid name of Monte Carlo.");
     process.exit(2);
 }
+
