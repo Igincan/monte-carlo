@@ -19,12 +19,10 @@ exports.script = () => {
                     pocetChybnychSad++;
                 }
             }
-            // console.log(`Počet chybných sad na palete ${indexPalety} je ${pocetChybnychSad}.`);
             if (pocetChybnychSad > 15) {
                 pokuta += 5000;
             }
         }
-        // console.log(`Pokuta v replikácii ${indexReplikacie} je ${pokuta}.`);
         if (pokuta > 15000) {
             pocetPresiahnutychReplikacii++;
         }
