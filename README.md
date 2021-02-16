@@ -2,21 +2,20 @@
 
 Príkladové riešenia zadaní Monte Carlo.
 
-## Začíname
-
-### Inštalácia
+## Inštalácia
 
 * Stiahnúť a nainštalovať [Node.js](https://nodejs.org/en/) (LTS alebo Current).
+
 * Stiahnúť alebo naklonovať repozitár.
 
-* Otvoriť hlavný priečinok repozitáru v príkazovom riadku (cmd, bash, ...)
+* Otvoriť hlavný priečinok repozitáru v príkazovom riadku (cmd, bash, ...).
 
 * Stiahnuť všetky potrebné balíčky príkazom:
 ```
 npm install
 ```
 
-### Spustenie
+## Spustenie
 
 * Program sa spustí príkazom:
 ```
