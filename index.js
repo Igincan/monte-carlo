@@ -9,10 +9,11 @@ fs.readdirSync("monte-carlos").forEach((file) => {
 
 if (process.argv.length < 3) {
     console.log("Usage:");
-    console.log("   node index.js [name_of_monte_carlo]");
+    console.log("   node index.js [name/index_of_monte_carlo]");
     console.log("Available Monte Carlos:");
+    let index = 1;
     for (const name in scripts) {
-        console.log(` - ${name}`);
+        console.log(` ${index++} - ${name}`);
     }
     process.exit(1);
 }
@@ -20,7 +21,12 @@ if (process.argv.length < 3) {
 if (scripts[process.argv[2]]) {
     scripts[process.argv[2]]();
 } else {
-    console.log("Invalid name of Monte Carlo.");
-    process.exit(2);
+    let key = Object.keys(scripts)[process.argv[2] - 1];
+    if (key) {
+        scripts[key]();
+    } else {
+        console.log("Invalid name/index of Monte Carlo.");
+        process.exit(2);
+    }
 }
 
