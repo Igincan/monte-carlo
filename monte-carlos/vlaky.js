@@ -31,12 +31,11 @@ exports.script = () => {
 
             for (let indexVyklopnika = 0; indexVyklopnika < 3; indexVyklopnika++) {
                 for (let indexSmeny = 0; indexSmeny < 2; indexSmeny++) {
-                    pocetVoznov3Vyklopniky -= randy.triangular(20, 35, 23);
-                }
-            }
-            for (let indexVyklopnika = 0; indexVyklopnika < 2; indexVyklopnika++) {
-                for (let indexSmeny = 0; indexSmeny < 2; indexSmeny++) {
-                    pocetVoznov2Vyklopniky -= randy.triangular(20, 35, 23);
+                    let pocetVoznovZaSmenu = randy.triangular(20, 35, 23);
+                    pocetVoznov3Vyklopniky -= pocetVoznovZaSmenu;
+                    if (indexVyklopnika < 2) {
+                        pocetVoznov2Vyklopniky -= pocetVoznovZaSmenu;
+                    }
                 }
             }
             if (pocetVoznov3Vyklopniky > 0) {

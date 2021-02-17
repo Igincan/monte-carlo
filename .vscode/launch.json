@@ -12,7 +12,7 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\index.js",
-            "args": ["vlaky"]
+            "args": ["geo_vlaky"]
         }
     ]
 }
