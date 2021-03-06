@@ -15,9 +15,7 @@ exports.script = () => {
     let integral = {
         a: 0,
         b: Math.PI,
-        f: (x) => {
-            return Math.sin(x);
-        }
+        f: (x) => Math.sin(x)
     };
 
     let height = findMaximum(integral) * (33 / 32); // bigger value for sure. if findMaximum didn't find real maximum
